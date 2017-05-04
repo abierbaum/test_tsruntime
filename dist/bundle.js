@@ -146,7 +146,7 @@ Foo = __decorate([
 console.log('========= Types =============');
 var clsType = tsruntime_1.getType(Foo);
 console.log('cls: ', tsruntime_1.Types.TypeKind[clsType.kind]);
-var dType = tsruntime_1.getType(StatsModel, "d");
+var dType = tsruntime_1.getType(StatsModel.prototype, "d");
 console.log('dType: ', tsruntime_1.Types.TypeKind[dType.kind]);
 console.log('Done');
 

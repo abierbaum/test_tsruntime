@@ -19,7 +19,7 @@ console.log('========= Types =============');
 const clsType = getType(Foo)
 console.log('cls: ', Types.TypeKind[clsType.kind]);
 
-const dType = getType(StatsModel, "d")
+const dType = getType(StatsModel.prototype, "d")
 console.log('dType: ', Types.TypeKind[dType.kind]);
 
 console.log('Done');
