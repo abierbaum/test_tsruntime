@@ -1,4 +1,10 @@
-const getCustomTransformers = require('tsruntime/dist/transformer').default;
+const tsRuntimeTransformer = require('tsruntime/dist/transformer').default;
+
+function getCustomTransformers() {
+  return {
+    before: [tsRuntimeTransformer]
+  }
+}
 
 module.exports = {
   entry: './src/main.ts',
@@ -15,7 +21,7 @@ module.exports = {
           {
             loader: 'awesome-typescript-loader',
             options: {
-              getCustomTransformers
+              getCustomTransformers: getCustomTransformers
             }
           }
         ]

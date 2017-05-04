@@ -101,6 +101,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var tsruntime_1 = __webpack_require__(0);
 var StatsModel = (function () {
@@ -108,8 +111,25 @@ var StatsModel = (function () {
     }
     return StatsModel;
 }());
+__decorate([
+    Reflect.metadata("tsruntime:type", { kind: 2, optional: true }),
+    __metadata("design:type", Number)
+], StatsModel.prototype, "a", void 0);
+__decorate([
+    Reflect.metadata("tsruntime:type", { kind: 1, optional: false }),
+    __metadata("design:type", String)
+], StatsModel.prototype, "b", void 0);
+__decorate([
+    Reflect.metadata("tsruntime:type", { kind: 8, optional: false, type: Array, arguments: [{ kind: 1 }] }),
+    __metadata("design:type", Array)
+], StatsModel.prototype, "c", void 0);
+__decorate([
+    Reflect.metadata("tsruntime:type", { kind: 9, optional: false, types: [{ kind: 2 }, { kind: 1 }, { kind: 4 }] }),
+    __metadata("design:type", Object)
+], StatsModel.prototype, "d", void 0);
 StatsModel = __decorate([
-    tsruntime_1.Reflective
+    tsruntime_1.Reflective,
+    Reflect.metadata("tsruntime:type", { kind: 10, props: ["a", "b", "c", "d"] })
 ], StatsModel);
 exports.StatsModel = StatsModel;
 var Foo = (function (_super) {
@@ -120,7 +140,8 @@ var Foo = (function (_super) {
     return Foo;
 }(Array));
 Foo = __decorate([
-    tsruntime_1.Reflective
+    tsruntime_1.Reflective,
+    Reflect.metadata("tsruntime:type", { kind: 10, props: [], extends: { kind: 8, type: Array, arguments: [{ kind: 1 }] } })
 ], Foo);
 console.log('========= Types =============');
 var clsType = tsruntime_1.getType(Foo);

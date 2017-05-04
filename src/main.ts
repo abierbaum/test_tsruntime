@@ -18,6 +18,7 @@ console.log('========= Types =============');
 
 const clsType = getType(Foo)
 console.log('cls: ', Types.TypeKind[clsType.kind]);
+
 const dType = getType(StatsModel, "d")
 console.log('dType: ', Types.TypeKind[dType.kind]);
 
